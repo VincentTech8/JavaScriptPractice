@@ -665,4 +665,210 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 9: Break and Continue
 
+// // 1. break Statement
+// // The break statement is used to exit a loop entirely.
+// // When break is encountered, the loop stops executing immediately, and the control is transferred to the statement 
+// // immediately following the loop.
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     break; // Exit the loop when i is 5
+//   }
+//   console.log(i);
+// }
+// // Output: 0, 1, 2, 3, 4
+
+// // 2. continue Statement
+// // The continue statement is used to skip the current iteration of the loop and proceed to the next iteration.
+// // When continue is encountered, the current iteration stops, and the loop moves on to the next iteration.
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     continue; // Skip the rest of the loop body when i is 5
+//   }
+//   console.log(i);
+// }
+// // Output: 0, 1, 2, 3, 4, 6, 7, 8, 9
+
+// // More break examples
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     break; // exits the loop when i is 5
+//   }
+
+//   console.log(i);
+// }
+
+// let i = 0;
+// while (i < 10) {
+//   if (i === 5) {
+//     break; // exits the loop when i is 5
+//   }
+
+//   console.log(i);
+//   i++;
+// }
+
+// let i = 0;
+// do {
+//   if (i === 5) {
+//     break;
+//   }
+
+//   console.log(i);
+//   i++;
+// } while (i < 10);
+
+// const obj = { a: 1, b: 2, c: 3 };
+// for (let key in obj) {
+//   if (key === 'b') {
+//     break;
+//   }
+//   console.log(obj[key]);
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+// for (let element of arr) {
+//   if (element === 3) {
+//     break;
+//   }
+//   console.log(element);
+// }
+
+// // More continue examples
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     continue; // It will skip console.log(i) when i = 5
+//   }
+//   console.log(i);
+// }
+
+// let i = 0;
+// while (i < 10) {
+//   i++; // We need to move this to the top of if block because When i equals 2, the continue statement is executed, 
+//   // which skips the rest of the code inside the loop for that iteration. This means that i++ is never executed when i 
+//   // is 2, causing the loop to run indefinitely with i stuck at 2.
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log(i);
+// }
+
+// let i = 0;
+// do {
+//   i++;
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+//   console.log(i);
+// } while (i < 10);
+
+// const obj = {a: 1, b: 2, c: 3, d: 4};
+// for (let key in obj) {
+//   if (obj[key] % 2 === 0){
+//     continue;
+//   }
+//   console.log(obj[key]);
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+// for (let element of arr) {
+//   if (element % 2 === 0) {
+//     continue;
+//   }
+//   console.log(element);
+// }
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 10:  Exercise: Max of two numbers
+
+// const findMax = (num1, num2) => {
+//   if (num1 > num2) {
+//     console.log(num1);
+//   } else {
+//     console.log(num2);
+//   }
+// }
+
+// function maxNum(num1, num2) {
+//   return num1 >= num2 ? num1 : num2;
+// }
+
+// console.log(maxNum(7, 2));
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 11:  Exercise: Fizzbuzz
+
+// function fizzBuzz(num) {
+//   if (num % 3 === 0 && num % 5 === 0) {
+//     return 'FizzBuzz';
+//   } else if (num % 3 ===0) {
+//     return 'Fizz';
+//   } else if (num % 5 === 0) {
+//     return 'Buzz';
+//   } else {
+//     return num;
+//   }
+// }
+
+// console.log(fizzBuzz(4));
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 12:  Exercise: Even and Odd Numbers
+
+// let arr = [1, 2, 3, 4, 5];
+// function findEven(arr) {
+//   let emptyarr = [];
+//   for (const element of arr) {
+//     if (element % 2 === 0) {
+//       emptyarr.push(element);
+//     }
+//   }
+//   return emptyarr;
+// }
+
+// console.log(findEven(arr));
+
+// let arr1 = [1, 2, 3, 4, 5];
+// function findOdd(arr) {
+//   let emptyarr = [];
+//   for (const element of arr) {
+//     if (element % 2 != 0) {
+//       emptyarr.push(element);
+//     }
+//   }
+//   return emptyarr;
+// }
+
+// console.log(findOdd(arr1));
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Section 4: JavaScript Objects
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 1: Object Literals
+
+// const dog = {
+//   name: 'Max',
+//   breed: 'Dachshund',
+//   age: 5,
+//   weightInPounds: 12,
+//   eat: function() {
+//     console.log('Chomp!');
+//   },
+//   bark() {
+//     console.log('Woof!');
+//   }
+// }
+
+// console.log(dog.name);
+// console.log(dog['name']);
+// dog.eat();
+// dog['eat']();
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 2: Factory Functions
+
 
