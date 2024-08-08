@@ -203,6 +203,12 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 // b++; // Return the current store value of b and then increment it (Use terminal to see)
 // ++b; // Increment it first then return the value of b (Use terminal to see)
 
+// console.log(1 + +"2" +"2");
+
+// 1. +"2" converts the string "2" to the number 2.
+// 2. 1 + 2 results in 3.
+// 3. 3 + "2" concatenates the number 3 (converted to string) with the string "2", resulting in "32".
+
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 2: Assignment Operators
 
@@ -870,5 +876,141 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 2: Factory Functions
+
+// function getDog(name, breed, age, weightInPounds) {
+//   return {
+//     name,
+//     breed,
+//     age,
+//     weightInPounds,
+//     eat() {
+//       console.log('Chomp!');
+//     },
+//     bark() {
+//       console.log('Woof!');
+//     }
+//   }
+// }
+
+// const anotherDog = getDog('Marley', 'Chocolate Lab', 3, 60);
+// console.log(anotherDog);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 3: Constructor Functions - Use PascalNotation and use 'this' keyword
+
+// function Dog(name, breed, age, weightInPounds) {
+//   // this = {}; (i.e., has been initialised by default)
+
+//   // Add properties to this
+//   this.name = name;
+//   this.breed = breed;
+//   this.age = age;
+//   this.weightInPounds = weightInPounds;
+
+//   this.eat = function() {
+//     console.log('Chomp!');
+//   }
+
+//   this.bark = function() {
+//     console.log('Woof!');
+//   }
+
+//   // return this;
+// }
+
+// const anotherDog = new Dog('Marley', 'Lab', 3, 60);
+// console.log(anotherDog);
+// anotherDog.bark();
+// console.log(anotherDog.name);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 4: Objects are Dynamic
+
+// const person = {
+//   name: 'Steven'
+// };
+
+// console.log(person);
+
+// person.favoriteFood = 'tacos';
+// console.log(person);
+
+// person['favoriteIceCream'] = 'chocolate';
+// console.log(person);
+
+// delete person.favoriteIceCream;
+// console.log(person);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 5: The Constructor Property
+
+// const person = {
+//   name: 'Steven'
+// };
+
+// console.log(person.constructor);
+
+// let newObj = {}; // is similar to
+// let newObj = new Object();
+
+// new String(); // instead we use 'Steven'
+// new Boolean(); // instead we use true, false
+// new Number(); // instead we use 1, 2, 3
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 6: Functions are Objects
+
+// function add(num1, num2) {
+//   return num1 + num2;
+// }
+
+// const n = add; // we can assign a function
+
+// console.log(n(2, 3));
+// console.log(add.length); // to display how many parameters in the function
+
+// function Programmer(name) {
+//   this.name = name;
+//   this.writeCode = function() {
+//     console.log("Code in JavaScript");
+//   }
+// }
+
+// console.log(Programmer.length);
+// console.log(Programmer.constructor);
+
+// const Programmer = new Function('name', `
+//   this.name = name;
+//   this.writeCode = function() {
+//     console.log("Code in JavaScript");
+//   }`
+// );
+
+// const newProgrammer = new Programmer('Steven');
+// newProgrammer.writeCode();
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 7: Value vs Reference types - Different in how they store the memory
+
+// // Primitive data types: number, string, boolean, null, undefined, Symbol, BigInt
+
+// let a = 10;
+// let b = a;
+
+// a = 20;
+
+// console.log(a);
+// console.log(b);
+
+// let a = {value: 20};
+// let b = a;
+
+// a.value = 100;
+
+// console.log(a);
+// console.log(b);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 8: Enumerating Properties of an Object
 
 
