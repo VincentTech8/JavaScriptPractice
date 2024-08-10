@@ -1173,9 +1173,16 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // let currentDate = new Date();
 // console.log(currentDate);
+// console.log(currentDate.getFullYear());
+// console.log(currentDate.getMonth());
+// console.log(currentDate.getTimezoneOffset());
 
 // // let specificDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
 // let specificDate = new Date(2024, 7, 10, 12, 30, 0);
 // console.log(specificDate); // Outputs: Sat Aug 10 2024 12:30:00 GMT+0000 (Coordinated Universal Time)
 
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Section 5: JavaScript Arrays
 
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 1: Introduction to Arrays
