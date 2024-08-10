@@ -1,3 +1,6 @@
+// References: https://developer.mozilla.org/en-US/
+// https://www.youtube.com/watch?v=Zi-Q0t4gMC8&t=3148s
+
 // Step 1. Download Node.js (LTS)
 // Step 2. Install VS Code
 // Step 3. Try the codes below
@@ -1012,5 +1015,167 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 8: Enumerating Properties of an Object
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// for (let element of numbers) {
+//   console.log(element);
+// }
+
+// const dog = {
+//   name: 'Max',
+//   age: 5,
+//   eyeColor: 'Blue'
+// };
+
+// for (let key in dog) {
+//   console.log(dog[key]);
+// }
+
+// const keys = Object.keys(dog);
+// console.log(keys);
+
+// const values = Object.values(dog);
+// console.log(values);
+
+// const entries = Object.entries(dog);
+// console.log(entries);
+
+// for (const key of Object.keys(dog)) {
+//   console.log(key);
+// }
+
+// for (const value of Object.values(dog)) {
+//   console.log(value);
+// }
+
+// for (const entry of Object.entries(dog)) {
+//   console.log(entry);
+// }
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 9: Cloning an Object
+
+// let a = {value: 10};
+// let b = a;
+
+// b.value = 20;
+
+// console.log(a);
+// console.log(b);
+
+// // Instead use assign method
+
+// let a = {value: 10};
+// let b = {};
+
+// Object.assign(b, a);
+
+// b.value = 20;
+
+// console.log(a);
+// console.log(b);
+
+// // Alternatively use spread operator (...)
+
+// let a = {value: 10};
+// let b = {...a};
+
+// b.value = 20;
+
+// console.log(a);
+// console.log(b);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 10: Garbage Collection - No need to worry about allocating or deallocating memory of the objects since JavaScript
+// engine has a garbage collector (i.e., it will self-manage itself and find the variables and objects that are no longer
+// being used in the program and it will intelligently free up that memory). 
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 11: The Built in Math Function - refer to developer.mozilla.org
+
+// console.log(Math.round(3.14));
+// console.log(Math.round(3.6));
+// console.log(Math.floor(4.6));
+// console.log(Math.ceil(4.2));
+// console.log(Math.max(1, 2, 3, 4, 5));
+// console.log(Math.min(1, 2, 3));
+// console.log(Math.pow(2, 3));
+// console.log(Math.sqrt(25));
+
+// let min = 1;
+// let max = 10;
+
+// const randomNum = Math.round(Math.random() * (max - min) - min);
+// console.log(randomNum);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 12: String Methods
+
+// const myName = 'Steven';
+// console.log(typeof myName);
+
+// const anotherName = new String('Joe');
+// console.log(typeof anotherName);
+
+// let sentence = "A new sentence.";
+
+// const doesIncludeNew = sentence.includes('new');
+// console.log(doesIncludeNew);
+
+// console.log(sentence[3]);
+
+// const startsWithA = sentence.startsWith('A');
+// console.log(startsWithA);
+
+// const endsWithA = sentence.endsWith('A');
+// console.log(endsWithA);
+
+// let updatedSentence = sentence.replace('new', 'short');
+// console.log(updatedSentence);
+
+// let sentence2 = "A dog";
+// let updatedSentence2 = sentence2.replace("dog", "cat");
+// console.log(updatedSentence2);
+
+// let sentence1 = " A new sentence.  a";
+// let trimmedSentence = sentence1.trim();
+// console.log(trimmedSentence);
+// let trimmedSentenceRight = sentence1.trimStart();
+// console.log(trimmedSentenceRight);
+// let trimmedSentenceLeft = sentence1.trimEnd();
+// console.log(trimmedSentenceLeft);
+
+// const wordsInSentence = sentence.split(' ');
+// console.log(wordsInSentence);
+
+// let email = "TestEmail@gmail.com";
+
+// let lowerCaseEmail = email.toLowerCase();
+// console.log(lowerCaseEmail);
+// let upperCaseEmail = email.toUpperCase();
+// console.log(upperCaseEmail);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 13: Template Literals - Provide an alternative syntax to the traditional strings by using back ticks
+
+// let firstName = 'Steven';
+// let lastName = 'Garcia';
+
+// let fullName1 = firstName + ' ' + lastName;
+// let fullName2 = `${firstName} ${lastName}`; // No need to use a lot of ' ' for a space
+
+// console.log(fullName1);
+// console.log(fullName2);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 14: The Date Object
+
+// let currentDate = new Date();
+// console.log(currentDate);
+
+// // let specificDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+// let specificDate = new Date(2024, 7, 10, 12, 30, 0);
+// console.log(specificDate); // Outputs: Sat Aug 10 2024 12:30:00 GMT+0000 (Coordinated Universal Time)
 
 
