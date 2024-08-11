@@ -1316,3 +1316,50 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 6: Removing Elements
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// numbers.pop();
+// console.log(numbers);
+
+// const lastElement = numbers.pop();
+// console.log(lastElement);
+// console.log(`lastElement: ${lastElement}`);
+// console.log(numbers);
+
+// const firstElement = numbers.shift();
+// console.log(`firstElement: ${firstElement}`);
+// console.log(numbers);
+
+// const middleElement = numbers.splice(2, 1); // Removing 1 element from index 2 (i.e., starts from index 2)
+// console.log(`middleElement: ${middleElement}`);
+// console.log(numbers);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 7: Emptying an Array
+
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(numbers);
+
+// while (numbers.length > 0) {
+//   numbers.pop();
+// }
+// console.log(numbers);
+
+// numbers.length = 0;
+// console.log(numbers);
+
+// const deletedNumbers = numbers.splice(0, numbers.length);
+// console.log(deletedNumbers);
+// console.log(numbers);
+
+// // Since an array is an Object
+// let numbers1 = [1, 2, 3, 4, 5];
+// console.log(numbers1);
+// let anotherNumbers1 = numbers1;
+// numbers1 = [];
+// console.log(numbers1);
+// console.log(anotherNumbers1);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 8: Combining and Slicing Arrays
