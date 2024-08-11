@@ -1,6 +1,8 @@
 // References: https://developer.mozilla.org/en-US/
 // https://www.youtube.com/watch?v=Zi-Q0t4gMC8&t=3148s
 
+// Imp: Functions are Object in JavaScript.
+
 // Step 1. Download Node.js (LTS)
 // Step 2. Install VS Code
 // Step 3. Try the codes below
@@ -1186,3 +1188,131 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 1: Introduction to Arrays
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 2: Adding Elements
+
+// const numbers = [5, 4, 3, 2, 1];
+
+// numbers.push(7, 8, 9);
+// console.log(numbers);
+
+// numbers.unshift(25, 24);
+// console.log(numbers);
+
+// numbers.splice(1, 0, 25, 24); // (index, #ElemetsToDelete, ValuesToAdd)
+// console.log(numbers);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 3: Finding Elements (Primitives)
+
+// const numbers = [5, 4, 3, 2, 1, 3];
+
+// const indexOfThree = numbers.indexOf(3); // Index starts from 0 and from left to right
+// console.log(indexOfThree);
+// const indexOfFour = numbers.indexOf(4);
+// console.log(indexOfFour);
+
+// const lastIndexOfThree = numbers.lastIndexOf(3);
+// console.log(lastIndexOfThree);
+
+// const indexOfTen = numbers.indexOf(10);
+// console.log(indexOfTen); // If the number 10 is not in the array, it will always return -1
+// console.log(numbers[indexOfTen]); // Output: undefined
+
+// if (indexOfTen === -1) {
+//   console.log('10 is not found in the array');
+// }
+
+// if (!numbers.includes(10)) {
+//   console.log('10 is not found in the array');
+// }
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 4: Finding Elements (Reference Types)
+
+// const employees = [
+//   {
+//     id: 1,
+//     name: 'Jim'
+//   },
+//   {
+//     id: 2,
+//     name: 'Michael Scott'
+//   },
+//   {
+//     id: 3,
+//     name: 'Pam'
+//   }
+// ];
+
+// const employee = employees.find(function(e) {
+//   return e.name === 'Pam';
+// });
+// console.log(employee);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 5: Arrow Functions as Predicates - Commonly used for callback functions
+
+// function add(num1, num2) {
+//   return console.log(num1 + num2);
+// }
+
+// const add1 = (num1, num2) => {
+//   return console.log(num1 + num2);
+// };
+
+// add(1, 2);
+// add1(1, 2);
+
+// // Alternatively
+
+// const add2 = (num1, num2) => console.log(num1 + num2);
+// add2(1, 3);
+
+// // Therefore, part 4 will be
+
+// const employees = [
+//   {
+//     id: 1,
+//     name: 'Jim'
+//   },
+//   {
+//     id: 2,
+//     name: 'Michael Scott'
+//   },
+//   {
+//     id: 3,
+//     name: 'Pam'
+//   }
+// ];
+
+// const specialEmployee = employees.find(employee => employee.name === 'Jim'); // JavaScript automatically handles the 
+// // parameter (e) for you within the context of the arrow function and find method. There’s no need to declare e 
+// // outside the function or initialize it beforehand because it’s scoped and defined within the function as an 
+// // argument. (i.e., e = employee in this case)
+// console.log(specialEmployee);
+
+// // Asynchronous Callback example
+
+// function fetchData(callback) {
+//   console.log("Fetching data...");
+
+//   // Simulate an asynchronous operation using setTimeout
+//   setTimeout(function() {
+//       console.log("Data fetched successfully!");
+//       callback();
+//   }, 2000); // Simulates a 2-second delay
+// }
+
+// function processData() {
+//   console.log("Processing the fetched data.");
+// }
+
+// // Fetch data and then process it using a callback
+// fetchData(processData);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 6: Removing Elements
