@@ -1363,3 +1363,155 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 8: Combining and Slicing Arrays
+
+// const exampleNumberA = [1, 2, 3];
+// const exampleNumberB = [4, 5, 6];
+
+// const combinedArray = exampleNumberA.concat(exampleNumberB);
+// console.log(combinedArray);
+
+// // slice(startIndex, endIndex) - the endIndex is exclusive (i.e., not included)
+// const firstSlice = combinedArray.slice(0, 4);
+// console.log(firstSlice);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 9: Spread Operator (a.k.a, ...)
+// To expand elements of an iterable (like an array or a string) or properties of an object into individual elements. 
+// It’s commonly used in various scenarios, such as copying arrays, combining arrays or objects, and passing elements 
+// of an array as arguments to a function.
+
+// 1. Combining arrays
+// const exampleNumberA = [1, 2, 3];
+// const exampleNumberB = [4, 5, 6];
+
+// let combinedArray = [...exampleNumberA, ...exampleNumberB];
+// console.log(combinedArray);
+
+// 2. Copying an array
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1];
+// console.log(arr2); // [1, 2, 3]
+// arr1[1] = 4;
+// console.log(arr1); // [1, 4, 3]
+// console.log(arr2); // [1, 2, 3]
+// // However, ...
+// const arr3 = arr1;
+// arr1[1] = 5;
+// console.log(arr1); // [1, 5, 3]
+// console.log(arr3); // [1, 5, 3]
+
+// 3. Passing array elements as arguments (i.e., Spreading in Function Calls)
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
+
+// const numbers = [1, 2, 3];
+// console.log(sum(...numbers)); // 6
+
+// 4. Copying an object
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { ...obj1 };
+// console.log(obj2);
+
+// 5. Merging objects
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { c: 2, d: 4 };
+// const mergedObj = { ...obj1, ...obj2 };
+// console.log(mergedObj);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 9: Iterating an Array
+
+// 1. for... of...
+// const numbers = [1, 2, 3, 4, 5];
+
+// for (let number of numbers) 
+//   console.log(number);
+
+// 2. forEach()
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach((number) => {
+//   console.log(number);
+// });
+// numbers.forEach((number, index) => {
+//   console.log(`${index}: ${number}`);
+// });
+
+// Since the codeblock only include 1 statement, make it into 1 line. We can also remove the () in the number after
+// forEach because it only has 1 parameter
+// numbers.forEach(number => console.log(number));
+// numbers.forEach((number, index) => console.log(`At index, ${index}: ${number}`));
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 10: Joining Arrays - Will to transform an array to a string
+
+// const numbers = [1, 2, 3, 4, 5];
+// const joinedNumbers = numbers.join(', ');
+// console.log(joinedNumbers);
+// console.log(typeof joinedNumbers);
+
+// const courseName = 'JavaScript for Beginners';
+// const lowerCaseCourseName = courseName.toLowerCase();
+// const parts = lowerCaseCourseName.split(' ');
+// console.log(parts);
+// const urlSlug = parts.join('-');
+// console.log(urlSlug);
+
+// Is similar to: (But only work if the entire operation only for 1 data type. In this case, string)
+
+// const parts2 = courseName
+//   .toLowerCase()
+//   .split(' '); // we cannot do .part() because different data type (i.e., an array)
+// console.log(parts2);
+// const urlSlug2 = parts2.join('-');
+// console.log(urlSlug2);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 11: Sorting Arrays
+
+// let characters = ['c', 'd', 'b', 'anton'];
+// characters.sort();
+// console.log(characters);
+
+// let characters2 = ['c', 'd', 'b', 'anton'];
+// characters2.reverse();
+// console.log(characters2);
+
+// let employees = [
+//   {id: 1, name: 'Jen'},
+//   {id: 2, name: 'Steven'},
+//   {id: 3, name: 'Andrew'},
+//   {id: 4, name: 'Terry'}
+// ];
+
+// // Order by name
+// employees.sort((a, b) => {
+//   // Using ASCII comparison, capital has lower value than lowercase letter
+//   const lowerCaseA = a.name.toLowerCase();
+//   const lowerCaseB = b.name.toLowerCase();
+
+//   if (lowerCaseA < lowerCaseB) return -1;
+//   if (lowerCaseA > lowerCaseB) return 1;
+//   return 0;
+// });
+
+// console.log(employees);
+
+// What the Return Values Mean:
+// -1:
+// Indicates that a should come before b in the sorted order.
+// Example: If the comparison returns -1 when comparing a and b, a will be placed before b in the array.
+
+// 1:
+// Indicates that a should come after b in the sorted order.
+// Example: If the comparison returns 1, a will be placed after b in the array.
+
+// 0:
+// Indicates that a and b are considered equal in terms of ordering, so their relative order will remain unchanged.
+// Example: If the comparison returns 0, the relative positions of a and b stay the same as they were before the sort.
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 12: Testing the Elements of an Array
+
+
