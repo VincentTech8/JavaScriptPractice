@@ -1514,4 +1514,23 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 12: Testing the Elements of an Array
 
+// // .every() method - Checks if all elements in an array pass a specified test (the callback function).
 
+// const numbers = [2, 4, 6, 8, 10];
+// const allAreEven = numbers.every(number => {
+//   return number % 2 === 0;
+// });
+// console.log(`areAllEven: ${allAreEven}`);
+
+// const allAreEven1 = numbers.every(number => number % 2 === 0);
+// console.log(`areAllEven: ${allAreEven1}`);
+
+// // .some() method - Checks if at least one element in an array passes a specified test (the callback function).
+
+// const numbers = [1, 3, 5, 7, 8, 9];
+
+// const hasOneEvenNumber = numbers.some(number => number % 2 === 0);
+// console.log(`hasOneEvenNumber: ${hasOneEvenNumber}`);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 13: Filtering an Array
