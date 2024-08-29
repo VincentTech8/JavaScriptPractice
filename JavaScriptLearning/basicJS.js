@@ -1534,3 +1534,96 @@ Source: https://www.w3schools.com/js/js_string_templates.asp */
 
 // ------------------------------------------------------------------------------------------------------------------------------------- //
 // Part 13: Filtering an Array
+
+// // .filter() method - is used to create a new array with all elements that pass the test implemented by the provided function.
+
+// const numbers = [5, 10, 15, 20, 25];
+// const filteredNumbers = numbers.filter(number => number >= 10);
+
+// console.log(filteredNumbers); // Output: [10, 15, 20, 25]
+
+// const employees = [
+//   { id: 1, name: 'Alice', role: 'Developer' },
+//   { id: 2, name: 'Bob', role: 'Designer' },
+//   { id: 3, name: 'Charlie', role: 'Developer' },
+//   { id: 4, name: 'Danielle', role: 'Manager' },
+// ]
+
+// const developers = employees.filter(employee => employee.role === 'Developer');
+// console.log(developers);
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 14: Mapping an Array
+
+// // .map() method - is used to create a new array by applying a function to every element of the original array.
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubled = numbers.map(number => number * 2);
+
+// console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+// const characters = ['a', 'b', 'c', 'd'];
+// const upperCaseCharacters = characters.map(character => character.toUpperCase());
+// console.log(upperCaseCharacters);
+
+// const people = [
+//   { name: 'Alice', age: 25, role: 'A', email: 'AliCe@gmail.com' },
+//   { name: 'Bob', age: 30, role: 'B', email: 'BoB@gmail.com' }, 
+//   { name: 'Charlie', age: 35, role: 'C', email: 'Charlie@gmail.com' },
+// ];
+
+// const olderPeople = people.map(person => {
+//   return { ...person, age: person.age + 1, test: 'Test', email: person.email.toLowerCase() };
+// });
+
+// console.log(olderPeople);
+
+// // Output: [
+// //   { name: 'Alice', age: 26, role: 'A', email: 'alice@gmail.com', test: 'Test' },
+// //   { name: 'Bob', age: 31, role: 'B', email: 'bob@gmail.com', test: 'Test' },
+// //   { name: 'Charlie', age: 36, role: 'C', email: 'charlie@gmail.com', test: 'Test' },
+// // ]
+
+// ------------------------------------------------------------------------------------------------------------------------------------- //
+// Part 15: Reducing an Array
+
+// // .reduce() method - is used to execute a reducer function on each element of the array, resulting in a single output value.
+
+// // array.reduce(callback(accumulator, currentValue, index, array), initialValue)
+
+// const numbers = [1, 2, 3, 4, 5];
+// const sum = numbers.reduce(function(accumulator, currentValue) {
+//   return accumulator + currentValue;
+// }, 0);
+
+// console.log(sum); // Output: 15
+
+// const numbers = [1, 2, 3, 4, 5];
+// const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+// console.log(sum); // Output: 15
+
+// const people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 25 },
+//   { name: 'David', age: 30 },
+// ];
+
+// const groupedByAge = people.reduce((accumulator, currentValue) => {
+//   const key = currentValue.age;
+//   if (!accumulator[key]) {
+//     accumulator[key] = [];
+//   }
+//   accumulator[key].push(currentValue);
+//   return accumulator;
+// }, {});
+
+// console.log(groupedByAge);
+// // Output: 
+// // {
+// //   25: [{ name: 'Alice', age: 25 }, { name: 'Charlie', age: 25 }],
+// //   30: [{ name: 'Bob', age: 30 }, { name: 'David', age: 30 }]
+// // }
+
+
